@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -std=c99
+CFLAGS=-Wall -std=c99  -g
 
 all: linked_list
 
@@ -14,3 +14,4 @@ test_linked_list.o: test_linked_list.c linked_list.h
 
 clean:
 	rm linked_list linked_list.o test_linked_list.o
+ 
