@@ -16,9 +16,19 @@ main:
     addi a1, x0, '\n'
     addi a0, x0, 11
     ecall # Print newline
-
+    
     addi a0, x0, 10
     ecall # Exit
 
 factorial:
     # YOUR CODE HERE
+    li x2,1 
+    li x5,1
+  LOOP:
+    blt a0,x2, exit
+    mul x5,x5, x2   
+    addi x2,x2,1
+    j LOOP 
+    exit:
+    mv a0,x5
+    jr ra
